@@ -3,7 +3,7 @@ import base64
 
 # Initialize OpenAI client
 client = openai.OpenAI(
-    api_key="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")
+    api_key="")
 
 
 # Helper to encode image in base64
