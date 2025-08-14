@@ -1,0 +1,12 @@
+baseline,candidate,label
+dataset/baseline/counter_app.png,dataset/baseline/counter_app.png,0
+dataset/baseline/counter_app_all_item_added.png,dataset/baseline/counter_app_all_item_added.png,0
+dataset/baseline/counter_app_clean.png,dataset/regressed/counter_app_button_layout_broken.png,1
+dataset/baseline/counter_app_clean.png,dataset/regressed/counter_app_button_missing.png,1
+dataset/baseline/counter_app_clean.png,dataset/regressed/counter_app_button_size.png,1
+dataset/baseline/counter_app_clean.png,dataset/baseline/counter_app_clean.png,0
+dataset/baseline/counter_app_count.png,dataset/baseline/counter_app_count.png,0
+dataset/baseline/counter_app_count_increased_7.png,dataset/baseline/counter_app_count_increased_7.png,0
+dataset/baseline/counter_app_item_count_increase.png,dataset/baseline/counter_app_item_count_increase.png,0
+dataset/baseline/counter_app_text_change.png,dataset/baseline/counter_app_text_change.png,0
+dataset/baseline/counter_app_clean.png,dataset/regressed/counter_app_text_overlap.png,1
