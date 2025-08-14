@@ -2,8 +2,7 @@ import openai
 import base64
 
 # Initialize OpenAI client
-client = openai.OpenAI(
-    api_key="")
+client = openai.OpenAI(api_key="")
 
 
 # Helper to encode image in base64
