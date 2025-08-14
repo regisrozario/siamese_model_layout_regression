@@ -1,0 +1,9 @@
+numpy==1.26.4
+torch==2.1.2
+torchvision==0.16.2
+# Image + data utils
+Pillow>=10.3.0
+opencv-python>=4.9.0.80
+# (optional) progress / plots
+tqdm>=4.66.1
+matplotlib>=3.8.0
