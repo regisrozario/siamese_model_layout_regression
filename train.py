@@ -6,6 +6,7 @@ from torchvision import transforms
 from PIL import Image
 import pandas as pd
 import os
+
 from siamese_model import SiameseNetwork
 
 class LayoutDataset(Dataset):
@@ -36,9 +37,10 @@ transform = transforms.Compose([
 
 dataset = LayoutDataset('dataset/pairs.csv', base_dir='dataset', transform=transform)
 dataloader = DataLoader(dataset, batch_size=16, shuffle=True)
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-model = SiameseNetwork()
-criterion = nn.BCELoss()
+model = SiameseNetwork(freeze_backbone=True).to(device)
+crit  = nn.BCEWithLogitsLoss()
 optimizer = optim.Adam(model.parameters(), lr=1e-4)
 
 for epoch in range(10):
@@ -47,7 +49,7 @@ for epoch in range(10):
     for img1, img2, label in dataloader:
         optimizer.zero_grad()
         outputs = model(img1, img2).squeeze()
-        loss = criterion(outputs, label)
+        loss = crit(outputs, label)
         loss.backward()
         optimizer.step()
         running_loss += loss.item()
